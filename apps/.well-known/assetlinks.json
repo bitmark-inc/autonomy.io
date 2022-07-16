@@ -1,0 +1,26 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.bitmark.autonomy_client",
+            "sha256_cert_fingerprints": [
+                "88:FE:09:89:E6:A2:D4:0E:16:CD:52:8B:A0:27:FC:13:2E:00:D8:E1:88:FE:E7:8F:7C:8A:43:8D:30:8A:B5:5C"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.bitmark.autonomy_client.inhouse",
+            "sha256_cert_fingerprints": [
+                "88:FE:09:89:E6:A2:D4:0E:16:CD:52:8B:A0:27:FC:13:2E:00:D8:E1:88:FE:E7:8F:7C:8A:43:8D:30:8A:B5:5C"
+            ]
+        }
+    }
+]

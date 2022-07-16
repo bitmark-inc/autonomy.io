@@ -1,0 +1,127 @@
+    html,
+    body {
+        font-size: 20px;
+        font-family: 'Atlas Grotesk';
+        font-weight: 300;
+        margin: 0;
+        background-color: #e5e5e5;
+    }
+    
+    header {
+        margin: 2rem auto 0 auto;
+        text-align: center;
+    }
+    
+    header h1 {
+        margin: 1rem;
+    }
+    
+    figure {
+        margin: 0 0 2rem 0;
+    }
+    
+    figcaption {
+        font-size: 50%;
+    }
+    
+    a {
+        color: #333;
+    }
+    
+    a:hover {
+        color: #000;
+    }
+    
+    #brand {
+        width: 3rem;
+    }
+    
+    main {
+        padding: 0 1.5rem;
+    }
+    
+    .item {
+        margin: 0 auto 3rem auto;
+        text-align: center;
+    }
+    
+    .item:first-of-type .download {
+        display: none;
+    }
+    
+    .item .phone {
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    
+    .item h2 {
+        margin-bottom: 0;
+    }
+    
+    .item p {
+        margin: 1rem 0;
+    }
+    
+    footer {
+        text-align: center;
+        margin: 4rem auto 2rem auto;
+        font-size: 50%;
+    }
+    
+    .download {
+        margin-bottom: 6rem;
+    }
+    
+    .open-source {
+        font-size: 80%;
+    }
+    
+    footer ul {
+        display: inline;
+        list-style: none;
+    }
+    
+    footer li {
+        display: inline;
+    }
+    
+    footer li:after {
+        content: ", ";
+    }
+    
+    .app-btn {
+        height: 48px;
+    }
+    
+    #copyright {
+        margin-top: 1rem;
+    }
+    /* Small devices (landscape phones, 576px and up) */
+    
+    @media (min-width: 576px) {
+        html,
+        body {
+            font-size: 22px;
+        }
+        .item {
+            margin: 2rem auto 5rem auto;
+        }
+    }
+    /* Medium devices (tablets, 768px and up) */
+    
+    @media (min-width: 768px) {
+        .item:first-of-type .download {
+            display: block;
+        }
+        .item,
+        footer {
+            max-width: 650px;
+        }
+        .item .phone {
+            width: 420px;
+        }
+        .item .item p {
+            margin: 2rem;
+        }
+    }
