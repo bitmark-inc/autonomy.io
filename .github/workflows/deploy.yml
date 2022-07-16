@@ -1,0 +1,42 @@
+name: Deploy the website
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: get updated files
+      run: |
+        # allow grep to fail
+        set +e
+        FILES=$(git log --stat="1000" -1 | grep '|' | awk '{print "/"$1}' | grep -e '\.html$')
+        set -e
+        [ -z "$FILES" ] && touch .updated_files && exit 0
+        for file in $FILES; do
+          echo $file
+          # add bare directory to list of updated paths when we see index.html
+          [[ "$file" == *"/index.html" ]] && echo $file | sed -e 's/\/index.html$/\//'
+        done | sort | uniq | tr '\n' ' ' > .updated_files
+    - name: Upload to S3
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'us-east-1'
+        SOURCE_DIR: 'apps'
+    - name: Invalidate CloudFront
+      uses: chetan/invalidate-cloudfront-action@v2
+      env:
+        DISTRIBUTION: ${{ secrets.AWS_DISTRIBUTION_ID }}
+        PATHS_FROM: .updated_files
+        AWS_REGION: "us-east-1"
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
