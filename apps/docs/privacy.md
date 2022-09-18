@@ -1,7 +1,6 @@
 # Autonomy Privacy Policy
 
-
-## Last Updated: September 15, 2022
+_Last Updated: September 15, 2022_
 
 Bitmark Inc. (“Bitmark”, “we”, “us”, “our”) provides this Privacy Policy to inform users of our policies and procedures regarding the collection, use and disclosure of personally identifiable information received from users of Bitmark’s Autonomy mobile application (the “Application”) and the related hosted data backup service (collectively the "Services"), and the Autonomy website, (the “Website”).  
 
