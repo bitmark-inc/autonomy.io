@@ -1,0 +1,42 @@
+name: Deploy the Simulation Sketchbook website
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - 'sskwp/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: subosito/flutter-action@v2
+    with:
+      flutter-version: '3.0.5'
+      channel: 'stable'
+    - run: flutter config --enable-web
+    - run: flutter pub get
+    - name: Build the website
+      working-directory: ./sskwp
+      run: flutter build web --release --base-href "/sskwp/"
+    - name: Upload to S3
+      uses: jakejarvis/s3-sync-action@master
+      working-directory: ./sskwp
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'us-east-1'
+        SOURCE_DIR: 'build/web'
+        DEST_DIR: 'sskwp'
+    - name: Invalidate CloudFront
+      uses: chetan/invalidate-cloudfront-action@v2
+      env:
+        DISTRIBUTION: ${{ secrets.AWS_DISTRIBUTION_ID }}
+        PATHS: "/sskwp/*"
+        AWS_REGION: "us-east-1"
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
