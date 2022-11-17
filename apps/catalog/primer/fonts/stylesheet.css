@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'MoMA Sans';
+    src: url('MoMASans-Bold.eot');
+    src: url('MoMASans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('MoMASans-Bold.woff2') format('woff2'),
+        url('MoMASans-Bold.woff') format('woff'),
+        url('MoMASans-Bold.ttf') format('truetype'),
+        url('MoMASans-Bold.svg#MoMASans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MoMA Sans';
+    src: url('MoMASans-Regular.eot');
+    src: url('MoMASans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('MoMASans-Regular.woff2') format('woff2'),
+        url('MoMASans-Regular.woff') format('woff'),
+        url('MoMASans-Regular.ttf') format('truetype'),
+        url('MoMASans-Regular.svg#MoMASans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
