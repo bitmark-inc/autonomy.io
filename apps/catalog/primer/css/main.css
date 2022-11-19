@@ -39,6 +39,9 @@ h5,
 h6 {
   font-weight: bold; }
 
+.disabled {
+  display: none !important;
+}
 .intro-head {
   position: absolute;
   top: 0px;
@@ -152,6 +155,11 @@ h6 {
     @media screen and (max-width: 767px) {
       .intro-slider .item-inner .content p {
         font-size: 18px; } }
+.intro-slider .item-inner-comming-soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .intro-slider .item-inner-first-screen {
   min-height: 100vh;
   padding: 20px 40px 100px 40px;
@@ -191,5 +199,8 @@ h6 {
       @media screen and (max-width: 767px) {
         .intro-slider .item-inner-first-screen .content .brand img {
           height: 30px; } }
-
+@media screen and (max-width: 356px) {
+  .intro-slider .item-inner-first-screen .content p {
+    font-size: 30px; }
+}
 /*# sourceMappingURL=main.css.map */
