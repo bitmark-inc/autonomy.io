@@ -42,6 +42,9 @@ h6 {
 .disabled {
   display: none !important;
 }
+.display-block {
+  display: block !important;
+}
 .intro-head {
   position: absolute;
   top: 0px;
