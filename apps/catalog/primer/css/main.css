@@ -108,7 +108,7 @@ h6 {
   .intro-slider .item.bg-yellow-light {
     background: #CCDB00; }
   .intro-slider .item.bg-green {
-    background: #CCDB00; }
+    background: #00AE41; }
   .intro-slider .item.bg-cyan-light {
     background: #87E2D1; }
   .intro-slider .item.bg-cyan {
@@ -117,26 +117,32 @@ h6 {
     background: #0056B8; }
 .intro-slider .item-inner {
   min-height: 100vh;
-  padding: 100px 40px 100px 40px;
+  padding: 200px 40px 100px 40px;
   display: flex;
   max-width: 1070px;
-  margin: 0px auto;
-  align-items: center; }
+  margin: 0px auto; }
   @media screen and (max-width: 1199px) {
     .intro-slider .item-inner {
       max-width: 540px;
-      padding: 100px 20px 100px 20px; } }
+      padding: 150px 20px 100px 20px; } }
+  @media screen and (max-width: 767px) {
+    .intro-slider .item-inner {
+      padding: 150px 20px 100px 20px; } }
   .intro-slider .item-inner .content h2 {
     font-size: 120px;
-    margin: 0px 0px 100px 0px; }
+    margin: 0px 0px 50px 0px;
+    min-height: 290px;
+    line-height: 1.1; }
     @media screen and (max-width: 1199px) {
       .intro-slider .item-inner .content h2 {
         font-size: 60px;
-        margin: 0px 0px 50px 0px; } }
+        margin: 0px 0px 40px 0px;
+        min-height: 160px; } }
     @media screen and (max-width: 767px) {
       .intro-slider .item-inner .content h2 {
         font-size: 40px;
-        margin: 0px 0px 30px 0px; } }
+        margin: 0px 0px 20px 0px;
+        min-height: 100px; } }
   .intro-slider .item-inner .content p {
     font-size: 40px;
     margin: 0px 0px 20px 0px; }
@@ -151,8 +157,7 @@ h6 {
   padding: 20px 40px 100px 40px;
   display: flex;
   max-width: 1070px;
-  margin: 0px auto;
-  align-items: center; }
+  margin: 0px auto; }
   @media screen and (max-width: 1199px) {
     .intro-slider .item-inner-first-screen {
       max-width: 540px;
