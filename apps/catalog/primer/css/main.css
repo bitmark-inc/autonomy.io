@@ -39,9 +39,28 @@ h5,
 h6 {
   font-weight: bold; }
 
+.page {
+  display: flex;
+  justify-content: center;
+  background: #000;
+}
+
+.page .mobile-view {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+}
+
 .intro-slider div .item .item-inner .content {
   color: #fff;
 }
+
+.intro-slider div .item .intro-head .inner img {
+  height: 78px;
+  width: fit-content;
+  display: inline;
+}
+
 .intro-head {
   position: absolute;
   top: 0px;
@@ -51,9 +70,19 @@ h6 {
   .intro-head .inner {
     text-align: left;
     padding: 40px 0px 0px 40px; }
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1080px) {
       .intro-head .inner {
-        padding: 20px 20px 0px 20px; } }
+        padding: 20px 20px 0px 20px;
+      }
+      .intro-head .inner img {
+        height: 40px;
+      }
+      .intro-slider div .item .intro-head .inner img {
+        height: 40px;
+        width: fit-content;
+        display: inline;
+      }
+    }
     @media screen and (max-width: 767px) {
       .intro-head .inner img {
         height: 20px; } }
@@ -63,19 +92,17 @@ h6 {
   top: 0px;
   right: 0px;
   z-index: 10; }
-  .intro-slider div .item .intro-head .inner img {
-    width: 72vw;
-    display: inline;
-  }
   .intro-slider div .item .intro-head .inner {
     text-align: right;
     padding: 40px 40px 0px 40px; }
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1080px) {
       .intro-slider div .item .intro-head .inner {
         padding: 20px 20px 0px 20px; } }
     @media screen and (max-width: 767px) {
       .intro-slider div .item .intro-head .inner img {
-        height: 20px; } }
+        width: fit-content;
+        height: 20px; }
+      }
 
 .intro-slider .owl-dots {
   position: absolute;
