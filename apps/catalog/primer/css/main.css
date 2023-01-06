@@ -39,6 +39,10 @@ h5,
 h6 {
   font-weight: bold; }
 
+.fw-700 {
+  font-weight: 700 !important;
+}
+
 .page {
   display: flex;
   justify-content: center;
