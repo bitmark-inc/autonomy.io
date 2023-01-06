@@ -74,7 +74,7 @@ h6 {
   .intro-head .inner {
     text-align: left;
     padding: 40px 0px 0px 40px; }
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 1079px) {
       .intro-head .inner {
         padding: 20px 20px 0px 20px;
       }
@@ -99,7 +99,7 @@ h6 {
   .intro-slider div .item .intro-head .inner {
     text-align: right;
     padding: 40px 40px 0px 40px; }
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 1079px) {
       .intro-slider div .item .intro-head .inner {
         padding: 20px 20px 0px 20px; } }
     @media screen and (max-width: 767px) {
@@ -223,7 +223,7 @@ h6 {
   padding-top: 27vh;
   width: 100%;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1079px) {
   .intro-slider .item-inner-first-screen {
     padding-left: 20px;
   }
