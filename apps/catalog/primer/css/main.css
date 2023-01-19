@@ -225,8 +225,15 @@ h6 {
   width: 100%;
 }
 .intro-slider .item-inner-first-screen .content {
-  padding-top: 27vh;
+  padding-top: calc(27vh - 20px);
   width: 100%;
+}
+.intro-slider .item-inner-first-screen .content h2 {
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  color: #fff
 }
 @media screen and (max-width: 1079px) {
   .intro-slider .item-inner-first-screen {
@@ -235,11 +242,17 @@ h6 {
   .intro-slider .item-inner-first-screen .content p {
     font-size: 30px;
   }
+  .intro-slider .item-inner-first-screen .content h2 {
+    font-size: 60px;
+  }
 }
   
 @media screen and (max-width: 767px) {
   .intro-slider .item-inner-first-screen .content p {
     font-size: 20px;
+  }
+  .intro-slider .item-inner-first-screen .content h2 {
+    font-size: 40px;
   }
 }
 
