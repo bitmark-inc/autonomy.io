@@ -13,8 +13,8 @@ owl.on('changed.owl.carousel', function(event) {
         currentIndex = event.page?.index;
         return;
     }
-    // Block navigate from the first to the last, and also block backward.
-    if ((currentIndex === 0 && nextIndex === pages - 1) || (nextIndex < currentIndex)) {
+    // Block navigate from the first to the last.
+    if ((currentIndex === 0 && nextIndex === pages - 1)) {
         owl.trigger("to.owl.carousel", [currentIndex, 100]);
     } else {
         currentIndex = event.page?.index;
