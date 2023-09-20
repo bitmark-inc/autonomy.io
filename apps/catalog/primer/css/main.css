@@ -60,8 +60,8 @@ h6 {
   max-width: 1080px;
 }
 
-.intro-slider div .item .item-inner .content {
-  color: #fff;
+.white-text {
+  color: #FFF;
 }
 
 .intro-slider div .item .intro-head .inner img {
@@ -95,7 +95,7 @@ h6 {
     @media screen and (max-width: 767px) {
       .intro-head .inner img {
         height: 20px; } }
-        
+
 .intro-slider div .item .intro-head {
   position: absolute;
   top: 0px;
@@ -147,7 +147,7 @@ h6 {
           height: 10px; } }
 .intro-slider .item {
   min-height: 100vh;
-  background-color: #000;
+  background-color: inherit;
   display: block;
   border: 1px solid transparent; }
   .intro-slider .item.bg-red {
@@ -225,7 +225,7 @@ h6 {
   width: 100%;
 }
 .intro-slider .item-inner-first-screen .content {
-  padding-top: calc(27vh - 20px);
+  /* padding-top: calc(27vh - 20px); */
   width: 100%;
 }
 .intro-slider .item-inner-first-screen .content h2 {
@@ -233,7 +233,8 @@ h6 {
   font-weight: 700;
   line-height: 1.1;
   margin: 0;
-  color: #fff
+  color: #000;
+  -webkit-text-stroke: 1.5px #FFF;
 }
 @media screen and (max-width: 1079px) {
   .intro-slider .item-inner-first-screen {
@@ -246,7 +247,7 @@ h6 {
     font-size: 60px;
   }
 }
-  
+
 @media screen and (max-width: 767px) {
   .intro-slider .item-inner-first-screen .content p {
     font-size: 20px;
