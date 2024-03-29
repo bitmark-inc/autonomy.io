@@ -62,8 +62,8 @@ By clicking the "Accept" button for this Agreement and/or using the Software, yo
 
 Questions, complaints or claims with respect to the Software should be directed to:
 
-Bitmark Inc.<br />
-1F No.489-1, Chongyang Rd.<br />
-Nangang Taipei Taiwan 115<br />
-+886 2-26515982<br />
+Bitmark Inc.  
+1F No.489-1, Chongyang Rd.  
+Nangang Taipei Taiwan 115  
++886 2-26515982  
 [support@feralfile.com](mailto:support@feralfile.com)
